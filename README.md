@@ -1,2 +1,3 @@
-# Shiv_201500649_Live
-Shiv Kumar Yadav Roll no.- 201500649 Contact no.- 9410217003
+# QuizMaster
+This is Quiz Master In which Student have to give Quiz.
+Live Link- https://aditya9675.github.io/QuizMaster/

@@ -1,148 +1,80 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentfinal_test</title>
-    <style>
-        *{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        #logo {
-
-            width: 100px;
-            height: 100px;
-            margin-left: -8px;
-            background-color: orangered;
-            color: black;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 30px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        #header {
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            position: fixed;
-            top: 0;
-        }
-        #buy_rogan {
-            margin-left: 400px;
-            color: orangered;
-            font-size: 25px;
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin-left: 30px;
-            justify-content: space-evenly;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            text-transform: uppercase;
-            padding: 13px 20px;
-            font-size: 20px;
-            border-radius: 10px;
-            transition: 0.65s;
-        }
-        nav ul li a:hover {
-            background-color: orangered;
-            color: black;
-        }
-        #big{
-            color: rgb(56, 56, 130);
-            font-size: 70px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        #box{
-            margin-top: 200px;
-        }
-        #sale_box{
-            color: rgb(91, 85, 85);
-            background-color: rgb(206, 201, 201);
-            width: 200px;
-            height: 23px;
-            border-radius: 20px;
-            text-align: center;
-        }
-        #photo{
-            margin-top: 150px;
-            color: black;
-        }
-        #main{
-            display: flex;
-            justify-content: space-evenly;
-        }
-        #rule{
-            color: rgb(91, 85, 85);
-            font-size: 25px;
-        }
-        .footer{
-            display: flex;
-            justify-content: space-evenly;
-            font-size: 30px;
-        }
-    </style>
+    <title>QuizMasters</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <header id="header">
-        <p id="logo">R</p>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Project</a></li>
-                <li><a href="">Pages</a></li>
-                <li><a href="">Elements</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-        <div ><a href="" id="buy_rogan">Buy Rogan &#x2192</a></div>
+<!-- start Quiz button -->
+<div class="start_btn"><button>Welcome <br> Start Quiz</button></div>
+
+<!-- Info Box -->
+<div class="info_box">
+    <div class="info-title"><span>Instructions</span></div>
+    <div class="info-list">
+        <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+        <div class="info">2. Once you select your answer, it can't be undone.</div>
+        <div class="info">3. You can't select any option once time goes off.</div>
+        <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+        <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        <div class="info">All The Best For Your Result.</div>
+    </div>
+    <div class="buttons">
+        <button class="quit">Quit</button>
+        <button class="restart">Continue</button>
+    </div>
+</div>
+
+<!-- Quiz Box -->
+<div class="quiz_box">
+    <header>
+        <div class="title">QuizMasters</div>
+        <div class="timer">
+            <div class="time_left_txt">Time Left</div>
+            <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
     </header>
-    <div id="main">
-        <div id="box">
-            <p id="sale_box">
-                <span style="color: orangered;">70% Off</span> for first 3 months
-            </p>
-            <div id="big">
-                Digital Agency<br> With Excellence<br> Services.
-            </div>
-            <p id="rule">
-                The 3 golden rules professional graphic designer don't.
-            </p>
+    <section>
+        <div class="que_text">
+            <!-- Here I've inserted question from JavaScript -->
         </div>
-        <div id="photo">
-            <img src="./photo.jpeg" alt="" height="500px" width="500px">
+        <div class="option_list">
+            <!-- Here I've inserted options from JavaScript -->
         </div>
+    </section>
+
+    <!-- footer of Quiz Box -->
+    <footer>
+        <div class="total_que">
+            <!-- Here I've inserted Question Count Number from JavaScript -->
+        </div>
+        <button class="next_btn">Next</button>
+    </footer>
+</div>
+
+<!-- Result Box -->
+<div class="result_box">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
     </div>
-    <div class="footer">
-        <h2 id="n">[Student Name]</h2>
-        <h2 id="roll">[University Roll No]</h2>
-        <h2 id="uni">Gla University,Mathura</h2>
-        <h2 id="date"></h2>
+    <div class="complete_text">Hurry! You've completed the Quiz!</div>
+    <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
     </div>
-    <script>
-        var n = document.getElementById("n");
-        var roll = document.getElementById("roll");
-        var date = document.getElementById("date");
+    <div class="buttons">
+        <button class="restart">Restart Quiz</button>
+        <button class="quit">Exit Quiz</button>
+    </div>
+</div>
 
-        n.innerHTML = "Shiv Kumar Yadav";
-        roll.innerHTML = "201500649";
+<!-- Inside this JavaScript file I've inserted Questions and Options only -->
 
-        var day = new Date();
-        var d = day.getDate();
-        var month = day.getMonth();
-        var year = day.getFullYear();
+<script src="script.js"></script>
 
-        date.innerHTML = `${d}-${month}-${year}`;
-
-    </script>
 </body>
 </html>
